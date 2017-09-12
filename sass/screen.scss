@@ -1,0 +1,257 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/utilities/sprites";
+@import "compass/reset";
+@import "global";
+@import "variables";
+@import "icons/*.png";
+@import "responsive";
+
+
+
+.section1{
+  height: 100%;
+  .left{
+    background: #eff2f6;
+    width: 60%;
+    height: 100%;
+    .slider-home{
+      position: relative;
+      top: 100px;
+      left: 40px;
+      width: 50%;
+      div{
+        height: 200px;
+      }
+      .slick-dots{
+        transform: rotate(90deg);
+        position: relative;
+        left: -50%;
+        top: -150px;
+      }
+      .slick-list{
+        margin-left: 30px;
+        margin-top: 150px;
+        h2{
+          font-size: 30px;
+        }
+        p{
+          color: grey;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .right{
+    background: #ff343d;
+    width: 40%;
+    height: 100%;
+  }
+  .drone{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    width: 600px;
+    transform: translate(-50%, -50%);
+  }
+  .circle{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    background: white;
+    width: 500px;
+    height: 500px;
+    border-radius : 50%;
+    transform: translate(-50%, -50%);
+  }
+  .mars{
+    font-size: 250px;
+    position: relative;
+    top: 120px;
+    right: -80px;
+    transform : rotate(90deg);
+    color: #ff343d;
+    text-shadow: 1px 0px 35px rgba(0, 0, 0, 0.2);
+  }
+  header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 100;
+    h2{
+      float: left;
+    }
+    .left-header{
+      width: 30%;
+      float: left;
+      margin-top: 30px;
+      margin-left: 100px;
+      i{
+        float: left;
+        margin: 0 10px 0 50px;
+        color: grey;
+      }
+      p{
+        color: grey;
+      }
+    }
+    .right-header{
+      width: 20%;
+      height: 30px;
+      float: right;
+      margin-top: 30px;
+      color: white;
+      font-weight: 200;
+      p{
+        width: 110px;
+        float: left;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.section2{
+  height: 400px;
+  font-size: 30px;
+  div{
+    float: left;
+    height: 100%;
+    &:nth-of-type(1){
+      width: 30%;
+      background: url("../img/drone2.png");
+      background-size: cover;
+      background-position-y: -25px;
+      @include vertical-center;
+      text-align: center;
+    }
+    &:nth-of-type(2){
+      position: relative;
+      width: 70%;
+      background: url("../img/section2.jpg");
+      button{
+        transform: rotate(-90deg) translate(-190%, -50%);
+        position: absolute;
+        background: white;
+        font-size: 10px;
+        color: black;
+        right: 50px;
+        width: 100px;
+      }
+    }
+    &:nth-of-type(3){
+      position: absolute;
+      width: 30%;
+      left: 30%;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      @include vertical-center;
+      p{
+        padding-left: 50px;
+      }
+    }
+    }
+  }
+.section3{
+  @include vertical-center;
+  height: 400px;
+  h3{
+    text-align: center;
+    font-size: 20px;
+    margin: 30px 0 30px 0;
+  }
+  .features-container{
+    width: 80%;
+    height: 60%;
+    text-align: center;
+    margin: 0 auto;
+    div{
+      width: 25%;
+      float: left;
+      img{
+        margin: 30px 0 30px 0;
+      }
+    }
+  }
+}
+.section4{
+  height: 50%;
+  .left{
+    width: 45%;
+    background: url("../img/photo.jpg");
+    background-size: cover;
+    height: 100%;
+  }
+  .right{
+    width: 55%;
+    height: 100%;
+    background: url("../img/bg2.png");
+    background-size: cover;
+    color: white;
+    @include vertical-center;
+    div{
+      font-size: 40px;
+      padding-left: 40px;
+    }
+    span{
+      color: #ff343d;
+    }
+    button{
+      color: white;
+      margin-left: 40px;
+    }
+  }
+}
+.section5{
+  height: 60%;
+  div{
+    height: 100%;
+    @include vertical-center;
+    span{
+      color: #ff343d;
+    }
+    button{
+      margin-left: 15%;
+    }
+    p{
+      font-size: 40px;
+      margin-left: 15%;
+    }
+  }
+  img{
+    width: 600px;
+    position: absolute;
+    right: -70px;
+  }
+}
+.section6{
+  height: 120%;
+  background: url("../img/bottom.jpg");
+  text-align: center;
+  div{
+    position: relative;
+    top: 80%;
+    color: white;
+    p{
+      font-size: 50px;
+    }
+    button{
+      background: white;
+      color: #78af9e;
+    }
+  }
+}
+footer{
+  height: 30%;
+  @include vertical-center;
+  text-align: center;
+  h3{
+    font-size: 20px;
+  }
+  p{
+    color: grey;
+  }
+}
